@@ -1,0 +1,27 @@
+
+version: 2
+
+models:
+  - name: int_anime_rating
+    description: "This table contains anime's rating given by users."
+    columns:
+      - name: ar_id
+        description: "This is primary key for int_anime_rating."
+        tests:
+          - not_null
+          - unique
+      - name: avg_rating
+        description: "This columns contains average rating of anime given by user."
+      - name: rated_by
+        description: "This columns contains number of total rating given by users to anime. "
+    
+  - name: int_users_rating
+    description: "This table contains user's rating given to each anime."
+    columns:
+      - name: ur_id
+        description: "This is primary key for int_users_rating"
+        tests:
+          - not_null
+          - unique
+      - name: rating
+        description: "This is rating column that given by the user to the anime."
