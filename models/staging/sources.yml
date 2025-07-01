@@ -1,0 +1,13 @@
+
+
+version: 2
+
+sources:
+  - name: raw
+    database: anime_dataset
+    schema: RAW
+    tables:
+      - name: animes
+      - name: users_details
+      - name: users_score
+    
