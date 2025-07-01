@@ -1,0 +1,77 @@
+
+version: 2
+
+models:
+  - name: stg_animes
+    description: "This table contains all information of anime"
+    columns:
+      - name: anime_id
+        description: "Primary key for stg_animes table"
+        tests:
+          - not_null
+          - unique
+      - name: regional_name
+        description: "Native name or title of the anime(can be in Japanese, Chinese or Korean)."
+      - name: genres
+        description: "The genres of the anime, separated by commas."
+      - name: synopsis
+        description: "A brief description or summary of the anime's plot."
+      - name: type 
+        description: "The type of the anime (e.g., TV series, movie, OVA(original video animations), etc.)."
+        tests:
+          - accepted_values:
+              values: ['TV','Movie','OVA','Special','ONA','UNKNOWN','Music']
+      - name: aired
+        description: "The dates when the anime was aired(release)."
+      - name: premiered
+        description: "The season and year when the anime premiered." 
+      - name: status
+        description: "The status of the anime (e.g., Finished Airing, Currently Airing, etc.)."
+        tests:
+          - accepted_values:
+              values: ['Finished Airing','Currently Airing','Not yet aired']
+      - name: licensors
+        description: "The licensors of the anime (e.g., streaming platforms)."
+      - name: source
+        description: "The source material of the anime (e.g., manga, light novel, original)."
+      
+
+  - name: stg_users_details
+    description: "This table contains user's information."
+    columns:
+      - name: user_id
+        description: "Primary key for stg_users_details"
+        tests:
+          - not_null
+          - unique 
+      - name: joined
+        description: "The date when the user joined the platform (in ISO format)."    
+      - name: days_watched
+        description: "The total number of days the user has spent watching anime."
+      - name: watching
+        description: "The number of anime currently being watched by the user."   
+      - name: completed
+        description: "The number of anime completed by the user."
+      - name: on_hold
+        description: "The number of anime on hold by the user." 
+      - name: dropped
+        description: " The number of anime dropped by the user."
+      - name: plan_to_watch
+        description: "The number of anime the user plans to watch in the future."
+      - name: total_entries
+        description: " The total number of anime entries in the user's list."
+      - name: rewatched
+        description: "The number of anime rewatched by the user."
+      - name: episodes_watched
+        description: "The total number of episodes watched by the user."
+
+  - name: stg_users_rating
+    description: "This table contains user's rating that given by user to the anime"
+    columns:
+      - name: rating_id
+        description: "Primary key for stg_users_rating"
+        tests:
+          - not_null
+          - unique
+      - name: rating
+        description: "The rating given by the user to the anime."
