@@ -37,6 +37,13 @@ The project uses a modular structure aligned with dbt best practices:
 
 ---
 
+## 📘 Project Documentation
+
+The full dbt documentation is available here:  
+👉 [View Docs](https://ramnaresh-ahi.github.io/anime_analytics/)
+
+---
+
 ## 🛠️ Tech Stack
 
 - **dbt Cloud** (Developer plan)
