@@ -44,6 +44,12 @@ The full dbt documentation is available here:
 
 ---
 
+## 📊 Dimensional Model
+
+![Star Schema for Anime Analytics](images/anime_analytics_star_schema.png)
+
+---
+
 ## 🛠️ Tech Stack
 
 - **dbt Cloud** (Developer plan)
